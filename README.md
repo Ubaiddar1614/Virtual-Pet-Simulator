@@ -107,7 +107,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📧 Contact
 
-Project Link: [https://github.com/maheen-736/VirtualPetSimulator](https://github.com/maheen-736/VirtualPetSimulator)
+Project Link: [https://github.com/maheen-736/VirtualPetStimulator](https://github.com/maheen-736/VirtualPetStimulator.git)
 
 ---
 
