@@ -1,6 +1,8 @@
 
 ```markdown
 # 🐾 Virtual Pet Simulator 🎮
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 
 A colorful, interactive virtual pet simulator built with Java Swing where you can adopt and care for different pets! 🐶🐱🐰🐦🐠
 
@@ -103,7 +105,7 @@ Contributions are welcome! Here's how:
 
 ## 📜 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the [MIT License](LICENSE).
 
 ## 📧 Contact
 
