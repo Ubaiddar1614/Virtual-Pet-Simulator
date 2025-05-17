@@ -1,8 +1,5 @@
-
+Virtual Pet Stimulator 🎮 🐶🐱🐰🐦🐠
 ```markdown
-# 🐾 Virtual Pet Simulator 🎮
-
-
 A colorful, interactive virtual pet simulator built with Java Swing where you can adopt and care for different pets! 🐶🐱🐰🐦🐠
 
 ## ✨ Features
@@ -25,7 +22,6 @@ A colorful, interactive virtual pet simulator built with Java Swing where you ca
 
 ## 📦 Project Structure
 
-```
 src/
 ├── exceptions/       # Custom exceptions
 │   ├── InvalidActionException.java
