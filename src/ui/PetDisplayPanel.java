@@ -1,8 +1,7 @@
 package ui;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
 import pets.Pet;
+import javax.swing.*;
+        import java.awt.*;
 
 public class PetDisplayPanel extends JPanel {
     private Pet pet;
@@ -28,7 +27,6 @@ public class PetDisplayPanel extends JPanel {
 
     public void animateMovement() {
         if (pet == null) return;
-
         moving = true;
         animationStep = 0;
 
@@ -44,7 +42,6 @@ public class PetDisplayPanel extends JPanel {
             }
             repaint();
         });
-
         animationTimer.start();
     }
 
@@ -56,7 +53,7 @@ public class PetDisplayPanel extends JPanel {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-        // Draw pet location
+        // Draw grid
         int gridSize = 20;
         g2d.setColor(new Color(220, 220, 220));
         for (int i = 0; i <= 10; i++) {
@@ -64,14 +61,13 @@ public class PetDisplayPanel extends JPanel {
             g2d.drawLine(0, i * gridSize, 10 * gridSize, i * gridSize);
         }
 
-        // Draw emoji
+        // Draw pet
         Font emojiFont = new Font("Segoe UI Emoji", Font.PLAIN, 30);
         g2d.setFont(emojiFont);
 
         int x = pet.getPosX() * gridSize - 5;
         int y = pet.getPosY() * gridSize + 20;
 
-        // If animated, add some bounce
         if (moving) {
             y -= Math.abs(5 * Math.sin(animationStep * 0.6));
             x += animationStep % 2 == 0 ? 1 : -1;
@@ -84,24 +80,17 @@ public class PetDisplayPanel extends JPanel {
         g2d.setColor(pet.getPrimaryColor().darker());
         g2d.drawString(pet.getName(), 10, getHeight() - 10);
 
-        // Draw mood indicator
+        // Draw mood
         String mood = getMoodEmoji();
         g2d.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 20));
         g2d.drawString(mood, getWidth() - 30, getHeight() - 10);
     }
 
     private String getMoodEmoji() {
-        if (pet == null) return "";
-
-        int happinessLevel = pet.getHappiness();
-        int energyLevel = pet.getEnergy();
-        int hungerLevel = pet.getHunger();
-
-        if (hungerLevel >= 8) return "😋";
-        if (energyLevel <= 2) return "😴";
-        if (happinessLevel >= 8) return "😄";
-        if (happinessLevel <= 3) return "😢";
-
+        if (pet.getHappiness() >= 8) return "😄";
+        if (pet.getHunger() >= 8) return "😋";
+        if (pet.getEnergy() <= 2) return "😴";
+        if (pet.getHappiness() <= 3) return "😢";
         return "😊";
     }
 }

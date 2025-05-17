@@ -7,7 +7,7 @@ public abstract class Pet {
     protected String name;
      public int hunger = 5;
     public int happiness = 5;
-    protected int energy = 10;
+    public int energy = 10;
     protected int posX = 5, posY = 5;
     protected PetType type;
 
