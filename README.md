@@ -102,10 +102,6 @@ Contributions are welcome! Here's how:
 
 Distributed under the [MIT License](LICENSE).
 
-## 📧 Contact
-
-Project Link: [https://github.com/maheen-736/VirtualPetStimulator](https://github.com/maheen-736/VirtualPetStimulator.git)
-
 ---
 
 Made with ❤️ and Java ☕ by Team Virtual Pets
